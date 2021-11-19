@@ -1,2 +1,2 @@
 # Hospital_Management_system
- DBMS Project
+ DBMS Project using Spring boot, hibernate and MySQL.
