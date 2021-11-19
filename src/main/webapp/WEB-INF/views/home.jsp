@@ -16,7 +16,6 @@
 	  <a class="navbar-link" href="/patsignin" style="text-decoration: none; padding-right: 1em;"><i class="fa fa-2x fa-sign-in"></i></a>
 	  <a class="navbar-link" href="/patregistration" style="text-decoration: none; padding-right: 2em;"><i class="fa fa-2x fa-user-plus"></i></a>
 	</nav>
-	<!-- <img style="width: 100%;" alt="No preview available." src="/images/doctor1.jpg"> -->
 	<img style="width: 100%;" alt="No preview available." src="/images/Hospital1.jpg">
 </body>
 </html>
