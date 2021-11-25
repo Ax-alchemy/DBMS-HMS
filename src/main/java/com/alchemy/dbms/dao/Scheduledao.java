@@ -2,11 +2,13 @@ package com.alchemy.dbms.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.hibernate.sql.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -35,12 +37,12 @@ public class Scheduledao {
 	private Userdao userdao;
 	
 	public void save(Date date,int slot,String doc_email,String pat_email) {
-		Map<Integer,String> map = new HashMap<>();
-		map.put(1,"10:00:00");
-		map.put(2,"11:00:00");
-		map.put(3,"12:00:00");
-		map.put(4,"14:00:00");
-		map.put(5,"15:00:00");
+		Map<Integer,Time> map = new HashMap<>();
+		map.put(1,Time.valueOf("10:00:00"));
+		map.put(2,Time.valueOf("11:00:00"));
+		map.put(3,Time.valueOf("12:00:00"));
+		map.put(4,Time.valueOf("14:00:00"));
+		map.put(5,Time.valueOf("15:00:00"));
 		String sql = "insert into Schedule(date,slot,doc_email,pat_email,start_time) values(?,?,?,?,?)";
 		jt.update(sql,date,slot,doc_email,pat_email,map.get(slot));
 	}
