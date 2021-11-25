@@ -12,7 +12,7 @@
 <body>
 	<nav class="navbar navbar-light" style="background-color: aqua;">
 	  <a class="navbar-brand" href="/" style="padding-left: 2em; size: 2em;">HMS</a>
-	  <h5 style="text-align: center; margin-left: auto; margin-right: auto;">Welcome to Aastha Hospital</h5>
+	  <h5 style="text-align: center; margin-left: auto; margin-right: auto;">Welcome to Medicity Hospital</h5>
 	  <a class="navbar-link" href="/patsignin" style="text-decoration: none; padding-right: 1em;"><i class="fa fa-2x fa-sign-in"></i></a>
 	  <a class="navbar-link" href="/patregistration" style="text-decoration: none; padding-right: 2em;"><i class="fa fa-2x fa-user-plus"></i></a>
 	</nav>
