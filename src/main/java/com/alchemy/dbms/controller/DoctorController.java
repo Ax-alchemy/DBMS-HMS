@@ -1,5 +1,7 @@
 package com.alchemy.dbms.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -82,7 +84,7 @@ public class DoctorController {
 	
 	
 	@PostMapping("/addhistory")
-	public ModelAndView AddHistory(Date date,String conditions,String medication,String surgeries,String pat_email,HttpSession session) {
+	public ModelAndView AddHistory(String date,String conditions,String medication,String surgeries,String pat_email,HttpSession session) throws ParseException {
 		ModelAndView mv = new ModelAndView();
 		if(session.getAttribute("doc_email")==null) {
 			mv.setViewName("home");
@@ -91,7 +93,8 @@ public class DoctorController {
 		
 		String doc_email = session.getAttribute("doc_email").toString();
 		
-		medicalhistorydao.save(date, conditions, medication, surgeries, pat_email);
+		Date dat = new SimpleDateFormat("dd/mm/yyyy").parse(date);
+		medicalhistorydao.save(dat, conditions, medication, surgeries, pat_email);
 		
 		mv.setViewName("doctorappointments");
 		
