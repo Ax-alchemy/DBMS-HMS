@@ -92,8 +92,8 @@ public class DoctorController {
 		}
 		
 		String doc_email = session.getAttribute("doc_email").toString();
-		
-		Date dat = new SimpleDateFormat("dd/mm/yyyy").parse(date);
+
+		Date dat = new SimpleDateFormat("yyyy-MM-dd").parse(date);
 		medicalhistorydao.save(dat, conditions, medication, surgeries, pat_email);
 		
 		mv.setViewName("doctorappointments");
