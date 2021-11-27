@@ -24,7 +24,7 @@ public class MedicalHistorydao {
 	@Autowired
 	private Userdao userdao;
 	
-	public void save(String date,String conditions,String medication,String surgeries,String pat_email) {
+	public void save(Date date,String conditions,String medication,String surgeries,String pat_email) {
 		String sql = "insert into Medical_History(date,conditions,medication,surgeries,pat_email) values(?,?,?,?,?)";
 		jt.update(sql,date,conditions,medication,surgeries,pat_email);
 	}
