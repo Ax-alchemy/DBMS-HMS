@@ -82,7 +82,7 @@ public class DoctorController {
 	
 	
 	@PostMapping("/addhistory")
-	public ModelAndView AddHistory(String date,String conditions,String medication,String surgeries,String pat_email,HttpSession session) {
+	public ModelAndView AddHistory(Date date,String conditions,String medication,String surgeries,String pat_email,HttpSession session) {
 		ModelAndView mv = new ModelAndView();
 		if(session.getAttribute("doc_email")==null) {
 			mv.setViewName("home");
